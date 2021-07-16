@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: .2em;
+}
+
+.titleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    padding: 1em;
+    font-size: 1.3em;
+    border-radius: .5em;
+}
+
+ @media only screen and (max-width: 768px) {
+     .header {
+       justify-content: center;
+     }
+     .titleContainer{
+        margin: 0 !important;
+        font-size: 1em;
+    }
+   }

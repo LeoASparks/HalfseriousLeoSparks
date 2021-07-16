@@ -1,0 +1,36 @@
+.mainShipsContainer {
+    height: 28em;
+    width: 20em;
+    border-radius: 1.5em;
+    margin: 1em;
+    background-color: white;
+    flex: 1 0 21%;
+    transition: transform .2s;
+    padding: 5%;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+.infoContainer {
+    display: flex;
+    width: 100%;
+    flex: 1 0 50%;
+}
+
+.generalFontStyle {
+    font-size: .8em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.shipTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: .5em;
+    color: rgb(255, 146, 22);
+}

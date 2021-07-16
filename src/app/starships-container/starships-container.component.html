@@ -1,0 +1,15 @@
+<div (click)="goToDetail()" class="shadow mainShipsContainer">
+    <div class="shipTitle">
+        {{ship.res.name}}
+    </div>
+    <div class="infoContainer">
+        <div>
+            <div *ngFor="let elem of ship.res | keyvalue" class="generalFontStyle">
+                <p style="margin:0" *ngIf="elem.key != 'name'">
+                    <span *ngIf="elem.key != 'name'" style="color: grey">{{elem.key}}: </span>
+                    {{elem.value}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

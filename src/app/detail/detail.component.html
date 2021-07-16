@@ -1,0 +1,36 @@
+<div class="detailContainer">
+    <div class="shadow detailTitle">
+        <mat-icon class="mr-1">flight</mat-icon> Details of the {{ship.res.name}}
+    </div>
+    <div class="shadow infoContainer">
+        <div *ngFor="let elem of ship.res | keyvalue" class="shadow detailSpecificContainer">
+            <span  style="color: grey">{{elem.key}}: </span>{{elem.value}}
+        </div>
+    </div>
+
+    <div style="width: 100%;" *ngIf="ship.pilots;">
+        <div class="shadow detailTitle">
+            <mat-icon class="mr-1">person</mat-icon> Pilots of this ship
+        </div>
+        <div class="shadow pilotContainer">
+            <mat-accordion style="width: 100%;">
+                <mat-expansion-panel *ngFor="let elem of ship.pilots" hideToggle>
+                    <!-- #enddocregion hide-toggle -->
+                    <mat-expansion-panel-header>
+                        <mat-panel-title style="width: 50%;">
+                            {{elem.name}}
+                        </mat-panel-title>
+                        <mat-panel-description style="width: 50%;">
+                            role: pilot
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div *ngFor="let element of elem | keyvalue" class="d-flex">
+                        <p style="width: 50%;">{{element.key}}: </p>
+                        <p>{{element.value}}</p>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+
+</div>
